@@ -1,0 +1,24 @@
+################################################################
+v2ray
+---------------------------------------------------------------
+vless://f837ac38-34b3-40d3-b823-031274f43d12@warp.xiangf506.workers.dev:443?encryption=none&security=tls&sni=warp.xiangf506.workers.dev&fp=randomized&type=ws&host=warp.xiangf506.workers.dev&path=%2F%3Fed%3D2048#warp.xiangf506.workers.dev
+---------------------------------------------------------------
+################################################################
+clash-meta
+---------------------------------------------------------------
+- type: vless
+  name: warp.xiangf506.workers.dev
+  server: warp.xiangf506.workers.dev
+  port: 443
+  uuid: f837ac38-34b3-40d3-b823-031274f43d12
+  network: ws
+  tls: true
+  udp: false
+  sni: warp.xiangf506.workers.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: "/?ed=2048"
+    headers:
+      host: warp.xiangf506.workers.dev
+---------------------------------------------------------------
+################################################################
