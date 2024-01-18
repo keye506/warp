@@ -1,0 +1,705 @@
+port: 7890
+socks-port: 1080
+redir-port: 7892
+mixed-port: 7893
+allow-lan: true
+mode: Rule
+log-level: info
+ipv6: true
+hosts:
+    services.googleapis.cn: 216.58.200.67
+    www.google.cn: 216.58.200.67
+external-controller: '0.0.0.0:9090'
+clash-for-android:
+    append-system-dns: false
+profile:
+    tracing: true
+dns:
+    enable: true
+    listen: '127.0.0.1:8853'
+    default-nameserver: [223.5.5.5, 1.0.0.1]
+    ipv6: false
+    enhanced-mode: fake-ip
+    fake-ip-filter: ['*.lan', 'stun.*.*.*', 'stun.*.*', time.windows.com, time.nist.gov, time.apple.com, time.asia.apple.com, '*.ntp.org.cn', '*.openwrt.pool.ntp.org', time1.cloud.tencent.com, time.ustc.edu.cn, pool.ntp.org, ntp.ubuntu.com, ntp.aliyun.com, ntp1.aliyun.com, ntp2.aliyun.com, ntp3.aliyun.com, ntp4.aliyun.com, ntp5.aliyun.com, ntp6.aliyun.com, ntp7.aliyun.com, time1.aliyun.com, time2.aliyun.com, time3.aliyun.com, time4.aliyun.com, time5.aliyun.com, time6.aliyun.com, time7.aliyun.com, '*.time.edu.cn', time1.apple.com, time2.apple.com, time3.apple.com, time4.apple.com, time5.apple.com, time6.apple.com, time7.apple.com, time1.google.com, time2.google.com, time3.google.com, time4.google.com, music.163.com, '*.music.163.com', '*.126.net', musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, '*.kuwo.cn', api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, '*.y.qq.com', streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, '*.xiami.com', '*.music.migu.cn', music.migu.cn, '*.msftconnecttest.com', '*.msftncsi.com', localhost.ptlogin2.qq.com, '*.*.*.srv.nintendo.net', '*.*.stun.playstation.net', 'xbox.*.*.microsoft.com', '*.ipv6.microsoft.com', '*.*.xboxlive.com', speedtest.cros.wr.pvp.net]
+    nameserver: ['https://223.6.6.6/dns-query', 'https://rubyfish.cn/dns-query', 'https://dns.pub/dns-query']
+    fallback: ['https://dns.rubyfish.cn/dns-query', 'https://public.dns.iij.jp/dns-query', 'tls://8.8.4.4']
+    fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32, 127.0.0.1/32], domain: [+.google.com, +.facebook.com, +.twitter.com, +.youtube.com, +.xn--ngstr-lra8j.com, +.google.cn, +.googleapis.cn, +.googleapis.com, +.gvt1.com] }
+proxies:
+  - name: "warp.xiangf506.workers.dev"
+    type: vless
+    server: 172.67.0.16
+    port: 2052
+    uuid: f837ac38-34b3-40d3-b823-031274f43d12
+    network: ws
+    tls: false
+    sni: warp.xiangf506.workers.dev
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/?ed=2048"
+      headers:
+        host: warp.xiangf506.workers.dev   
+  - name: "warp2 🇺🇸"
+    type: vless
+    server: 1.2.3.4
+    port: 2052
+    uuid: 0a498f05-ef89-23ba-9f8a-9ddf1cf0e41a
+    network: ws
+    tls: false
+    sni: warp.xxxx.workers.dev
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/?ed=2048"
+      headers:
+        host: warp.xxxx.workers.dev   
+  - name: "warp3 🇺🇸"
+    type: vless
+    server: 1.2.3.4
+    port: 2052
+    uuid: 0a498f05-ef89-23ba-9f8a-9ddf1cf0e41a
+    network: ws
+    tls: false
+    sni: warp.xxxx.workers.dev
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/?ed=2048"
+      headers:
+        host: warp.xxxx.workers.dev    
+  - name: "warp4 🇺🇸"
+    type: vless
+    server: 1.2.3.4
+    port: 2052
+    uuid: 0a498f05-ef89-23ba-9f8a-9ddf1cf0e41a
+    network: ws
+    tls: false
+    sni: warp.xxxx.workers.dev
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/?ed=2048"
+      headers:
+        host: warp.xxxx.workers.dev   
+  - name: "warp5 🇺🇸"
+    type: vless
+    server: 1.2.3.4
+    port: 2052
+    uuid: 0a498f05-ef89-23ba-9f8a-9ddf1cf0e41a
+    network: ws
+    tls: false
+    sni: warp.xxxx.workers.dev
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/?ed=2048"
+      headers:
+        host: warp.xxxx.workers.dev   
+  - name: "warp6 🇺🇸"
+    type: vless
+    server: 1.2.3.4
+    port: 2052
+    uuid: 0a498f05-ef89-23ba-9f8a-9ddf1cf0e41a
+    network: ws
+    tls: false
+    sni: warp.xxxx.workers.dev
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/?ed=2048"
+      headers:
+        host: warp.xxxx.workers.dev   
+  - name: "warp7 🇺🇸"
+    type: vless
+    server: 1.2.3.4
+    port: 2052
+    uuid: 0a498f05-ef89-23ba-9f8a-9ddf1cf0e41a
+    network: ws
+    tls: false
+    sni: warp.xxxx.workers.dev
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/?ed=2048"
+      headers:
+        host: warp.xxxx.workers.dev   
+  - name: "warp8 🇺🇸"
+    type: vless
+    server: 1.2.3.4
+    port: 2052
+    uuid: 0a498f05-ef89-23ba-9f8a-9ddf1cf0e41a
+    network: ws
+    tls: false
+    sni: warp.xxxx.workers.dev
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/?ed=2048"
+      headers:
+        host: warp.xxxx.workers.dev   
+  - name: "warp9 🇺🇸"
+    type: vless
+    server: 1.2.3.4
+    port: 2052
+    uuid: 0a498f05-ef89-23ba-9f8a-9ddf1cf0e41a
+    network: ws
+    tls: false
+    sni: warp.xxxx.workers.dev
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/?ed=2048"
+      headers:
+        host: warp.xxxx.workers.dev    
+  - name: "warp10 🇺🇸"
+    type: vless
+    server: 1.2.3.4
+    port: 2052
+    uuid: 0a498f05-ef89-23ba-9f8a-9ddf1cf0e41a
+    network: ws
+    tls: false
+    sni: warp.xxxx.workers.dev
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/?ed=2048"
+      headers:
+        host: warp.xxxx.workers.dev   
+  - name: "warp11 🇺🇸"
+    type: vless
+    server: 1.2.3.4
+    port: 2052
+    uuid: 0a498f05-ef89-23ba-9f8a-9ddf1cf0e41a
+    network: ws
+    tls: false
+    sni: warp.xxxx.workers.dev
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/?ed=2048"
+      headers:
+        host: warp.xxxx.workers.dev   
+  - name: "warp12 🇺🇸"
+    type: vless
+    server: 1.2.3.4
+    port: 2052
+    uuid: 0a498f05-ef89-23ba-9f8a-9ddf1cf0e41a
+    network: ws
+    tls: false
+    sni: warp.xxxx.workers.dev
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/?ed=2048"
+      headers:
+        host: warp.xxxx.workers.dev  
+        
+proxy-groups:
+    - { name: ♻️ 海外节点, type: select, proxies: ['♻️ 自动选择', '♻️ 故障转移', 'warp1 🇺🇸', 'warp2 🇺🇸', 'warp3 🇺🇸', 'warp4 🇺🇸', 'warp5 🇺🇸', 'warp6 🇺🇸', 'warp7 🇺🇸', 'warp8 🇺🇸', 'warp9 🇺🇸', 'warp10 🇺🇸', 'warp11 🇺🇸', 'warp12 🇺🇸'] }
+    - { name: ♻️ 自动选择, type: url-test, proxies: ['warp1 🇺🇸', 'warp2 🇺🇸', 'warp3 🇺🇸', 'warp4 🇺🇸', 'warp5 🇺🇸', 'warp6 🇺🇸', 'warp7 🇺🇸', 'warp8 🇺🇸', 'warp9 🇺🇸', 'warp10 🇺🇸', 'warp11 🇺🇸', 'warp12 🇺🇸'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: ♻️ 故障转移, type: fallback, proxies: ['warp1 🇺🇸', 'warp2 🇺🇸', 'warp3 🇺🇸', 'warp4 🇺🇸', 'warp5 🇺🇸', 'warp6 🇺🇸', 'warp7 🇺🇸', 'warp8 🇺🇸', 'warp9 🇺🇸', 'warp10 🇺🇸', 'warp11 🇺🇸', 'warp12 🇺🇸'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+rules:
+    - 'DOMAIN-SUFFIX,ipaddress.my,♻️ 海外节点'  
+    - 'DOMAIN-SUFFIX,v2rayssr.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,services.googleapis.cn,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,xn--ngstr-lra8j.com,♻️ 海外节点'
+    - 'DOMAIN,safebrowsing.urlsec.qq.com,DIRECT'
+    - 'DOMAIN,safebrowsing.blog.51cto.com,DIRECT'   
+    - 'DOMAIN,safebrowsing.googleapis.com,DIRECT'
+    - 'DOMAIN,developer.apple.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,digicert.com,♻️ 海外节点'
+    - 'DOMAIN,ocsp.apple.com,♻️ 海外节点'
+    - 'DOMAIN,ocsp.comodoca.com,♻️ 海外节点'
+    - 'DOMAIN,ocsp.usertrust.com,♻️ 海外节点'
+    - 'DOMAIN,ocsp.sectigo.com,♻️ 海外节点'
+    - 'DOMAIN,ocsp.verisign.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,apple-dns.net,♻️ 海外节点'
+    - 'DOMAIN,testflight.apple.com,♻️ 海外节点'
+    - 'DOMAIN,sandbox.itunes.apple.com,♻️ 海外节点'
+    - 'DOMAIN,itunes.apple.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,apps.apple.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,blobstore.apple.com,♻️ 海外节点'
+    - 'DOMAIN,cvws.icloud-content.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,mzstatic.com,DIRECT'
+    - 'DOMAIN-SUFFIX,itunes.apple.com,DIRECT'
+    - 'DOMAIN-SUFFIX,icloud.com,DIRECT'
+    - 'DOMAIN-SUFFIX,icloud-content.com,DIRECT'
+    - 'DOMAIN-SUFFIX,me.com,DIRECT'
+    - 'DOMAIN-SUFFIX,aaplimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cdn20.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cdn-apple.com,DIRECT'
+    - 'DOMAIN-SUFFIX,akadns.net,DIRECT'
+    - 'DOMAIN-SUFFIX,akamaiedge.net,DIRECT'
+    - 'DOMAIN-SUFFIX,edgekey.net,DIRECT'
+    - 'DOMAIN-SUFFIX,mwcloudcdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,mwcname.com,DIRECT'
+    - 'DOMAIN-SUFFIX,apple.com,DIRECT'
+    - 'DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT'
+    - 'DOMAIN-SUFFIX,apple-mapkit.com,DIRECT'
+    - 'DOMAIN-SUFFIX,126.com,DIRECT'
+    - 'DOMAIN-SUFFIX,126.net,DIRECT'
+    - 'DOMAIN-SUFFIX,127.net,DIRECT'
+    - 'DOMAIN-SUFFIX,163.com,DIRECT'
+    - 'DOMAIN-SUFFIX,360buyimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,36kr.com,DIRECT'
+    - 'DOMAIN-SUFFIX,acfun.tv,DIRECT'
+    - 'DOMAIN-SUFFIX,air-matters.com,DIRECT'
+    - 'DOMAIN-SUFFIX,aixifan.com,DIRECT'
+    - 'DOMAIN-KEYWORD,alicdn,DIRECT'
+    - 'DOMAIN-KEYWORD,alipay,DIRECT'
+    - 'DOMAIN-KEYWORD,taobao,DIRECT'
+    - 'DOMAIN-SUFFIX,amap.com,DIRECT'
+    - 'DOMAIN-SUFFIX,autonavi.com,DIRECT'
+    - 'DOMAIN-KEYWORD,baidu,DIRECT'
+    - 'DOMAIN-SUFFIX,bdimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,bdstatic.com,DIRECT'
+    - 'DOMAIN-SUFFIX,bilibili.com,DIRECT'
+    - 'DOMAIN-SUFFIX,bilivideo.com,DIRECT'
+    - 'DOMAIN-SUFFIX,caiyunapp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,clouddn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cnbeta.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cnbetacdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cootekservice.com,DIRECT'
+    - 'DOMAIN-SUFFIX,csdn.net,DIRECT'
+    - 'DOMAIN-SUFFIX,ctrip.com,DIRECT'
+    - 'DOMAIN-SUFFIX,dgtle.com,DIRECT'
+    - 'DOMAIN-SUFFIX,dianping.com,DIRECT'
+    - 'DOMAIN-SUFFIX,douban.com,DIRECT'
+    - 'DOMAIN-SUFFIX,doubanio.com,DIRECT'
+    - 'DOMAIN-SUFFIX,duokan.com,DIRECT'
+    - 'DOMAIN-SUFFIX,easou.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ele.me,DIRECT'
+    - 'DOMAIN-SUFFIX,feng.com,DIRECT'
+    - 'DOMAIN-SUFFIX,fir.im,DIRECT'
+    - 'DOMAIN-SUFFIX,frdic.com,DIRECT'
+    - 'DOMAIN-SUFFIX,g-cores.com,DIRECT'
+    - 'DOMAIN-SUFFIX,godic.net,DIRECT'
+    - 'DOMAIN-SUFFIX,gtimg.com,DIRECT'
+    - 'DOMAIN,cdn.hockeyapp.net,DIRECT'
+    - 'DOMAIN-SUFFIX,hongxiu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,hxcdn.net,DIRECT'
+    - 'DOMAIN-SUFFIX,iciba.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ifeng.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ifengimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ipip.net,DIRECT'
+    - 'DOMAIN-SUFFIX,iqiyi.com,DIRECT'
+    - 'DOMAIN-SUFFIX,jd.com,DIRECT'
+    - 'DOMAIN-SUFFIX,jianshu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,knewone.com,DIRECT'
+    - 'DOMAIN-SUFFIX,le.com,DIRECT'
+    - 'DOMAIN-SUFFIX,lecloud.com,DIRECT'
+    - 'DOMAIN-SUFFIX,lemicp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,licdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,luoo.net,DIRECT'
+    - 'DOMAIN-SUFFIX,meituan.com,DIRECT'
+    - 'DOMAIN-SUFFIX,meituan.net,DIRECT'
+    - 'DOMAIN-SUFFIX,mi.com,DIRECT'
+    - 'DOMAIN-SUFFIX,miaopai.com,DIRECT'
+    - 'DOMAIN-SUFFIX,microsoft.com,DIRECT'
+    - 'DOMAIN-SUFFIX,microsoftonline.com,DIRECT'
+    - 'DOMAIN-SUFFIX,miui.com,DIRECT'
+    - 'DOMAIN-SUFFIX,miwifi.com,DIRECT'
+    - 'DOMAIN-SUFFIX,mob.com,DIRECT'
+    - 'DOMAIN-SUFFIX,netease.com,DIRECT'
+    - 'DOMAIN-SUFFIX,office.com,DIRECT'
+    - 'DOMAIN-SUFFIX,office365.com,DIRECT'
+    - 'DOMAIN-KEYWORD,officecdn,DIRECT'
+    - 'DOMAIN-SUFFIX,oschina.net,DIRECT'
+    - 'DOMAIN-SUFFIX,ppsimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,pstatp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qcloud.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qdaily.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qdmm.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qhimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qhres.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qidian.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qihucdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qiniu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qiniucdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qiyipic.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qq.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qqurl.com,DIRECT'
+    - 'DOMAIN-SUFFIX,rarbg.to,DIRECT'
+    - 'DOMAIN-SUFFIX,ruguoapp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,segmentfault.com,DIRECT'
+    - 'DOMAIN-SUFFIX,sinaapp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,smzdm.com,DIRECT'
+    - 'DOMAIN-SUFFIX,snapdrop.net,DIRECT'
+    - 'DOMAIN-SUFFIX,sogou.com,DIRECT'
+    - 'DOMAIN-SUFFIX,sogoucdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,sohu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,soku.com,DIRECT'
+    - 'DOMAIN-SUFFIX,speedtest.net,DIRECT'
+    - 'DOMAIN-SUFFIX,sspai.com,DIRECT'
+    - 'DOMAIN-SUFFIX,suning.com,DIRECT'
+    - 'DOMAIN-SUFFIX,taobao.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tencent.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tenpay.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tianyancha.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tmall.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tudou.com,DIRECT'
+    - 'DOMAIN-SUFFIX,umetrip.com,DIRECT'
+    - 'DOMAIN-SUFFIX,upaiyun.com,DIRECT'
+    - 'DOMAIN-SUFFIX,upyun.com,DIRECT'
+    - 'DOMAIN-SUFFIX,veryzhun.com,DIRECT'
+    - 'DOMAIN-SUFFIX,weather.com,DIRECT'
+    - 'DOMAIN-SUFFIX,weibo.com,DIRECT'
+    - 'DOMAIN-SUFFIX,xiami.com,DIRECT'
+    - 'DOMAIN-SUFFIX,xiami.net,DIRECT'
+    - 'DOMAIN-SUFFIX,xiaomicp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ximalaya.com,DIRECT'
+    - 'DOMAIN-SUFFIX,xmcdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,xunlei.com,DIRECT'
+    - 'DOMAIN-SUFFIX,yhd.com,DIRECT'
+    - 'DOMAIN-SUFFIX,yihaodianimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,yinxiang.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ykimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,youdao.com,DIRECT'
+    - 'DOMAIN-SUFFIX,youku.com,DIRECT'
+    - 'DOMAIN-SUFFIX,zealer.com,DIRECT'
+    - 'DOMAIN-SUFFIX,zhihu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,zhimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,zimuzu.tv,DIRECT'
+    - 'DOMAIN-SUFFIX,zoho.com,DIRECT'
+    - 'DOMAIN-KEYWORD,amazon,♻️ 海外节点'
+    - 'DOMAIN-KEYWORD,google,♻️ 海外节点'
+    - 'DOMAIN-KEYWORD,gmail,♻️ 海外节点'
+    - 'DOMAIN-KEYWORD,youtube,♻️ 海外节点'
+    - 'DOMAIN-KEYWORD,facebook,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,fb.me,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,fbcdn.net,♻️ 海外节点'
+    - 'DOMAIN-KEYWORD,twitter,♻️ 海外节点'
+    - 'DOMAIN-KEYWORD,instagram,♻️ 海外节点'
+    - 'DOMAIN-KEYWORD,dropbox,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,twimg.com,♻️ 海外节点'
+    - 'DOMAIN-KEYWORD,blogspot,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,youtu.be,♻️ 海外节点'
+    - 'DOMAIN-KEYWORD,whatsapp,♻️ 海外节点'
+    - 'DOMAIN-KEYWORD,admarvel,REJECT'
+    - 'DOMAIN-KEYWORD,admaster,REJECT'
+    - 'DOMAIN-KEYWORD,adsage,REJECT'
+    - 'DOMAIN-KEYWORD,adsmogo,REJECT'
+    - 'DOMAIN-KEYWORD,adsrvmedia,REJECT'
+    - 'DOMAIN-KEYWORD,adwords,REJECT'
+    - 'DOMAIN-KEYWORD,adservice,REJECT'
+    - 'DOMAIN-SUFFIX,appsflyer.com,REJECT'
+    - 'DOMAIN-KEYWORD,domob,REJECT'
+    - 'DOMAIN-SUFFIX,doubleclick.net,REJECT'
+    - 'DOMAIN-KEYWORD,duomeng,REJECT'
+    - 'DOMAIN-KEYWORD,dwtrack,REJECT'
+    - 'DOMAIN-KEYWORD,guanggao,REJECT'
+    - 'DOMAIN-KEYWORD,lianmeng,REJECT'
+    - 'DOMAIN-SUFFIX,mmstat.com,REJECT'
+    - 'DOMAIN-KEYWORD,mopub,REJECT'
+    - 'DOMAIN-KEYWORD,omgmta,REJECT'
+    - 'DOMAIN-KEYWORD,openx,REJECT'
+    - 'DOMAIN-KEYWORD,partnerad,REJECT'
+    - 'DOMAIN-KEYWORD,pingfore,REJECT'
+    - 'DOMAIN-KEYWORD,supersonicads,REJECT'
+    - 'DOMAIN-KEYWORD,uedas,REJECT'
+    - 'DOMAIN-KEYWORD,umeng,REJECT'
+    - 'DOMAIN-KEYWORD,usage,REJECT'
+    - 'DOMAIN-SUFFIX,vungle.com,REJECT'
+    - 'DOMAIN-KEYWORD,wlmonitor,REJECT'
+    - 'DOMAIN-KEYWORD,zjtoolbar,REJECT'
+    - 'DOMAIN-SUFFIX,9to5mac.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,abpchina.org,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,adblockplus.org,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,adobe.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,akamaized.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,alfredapp.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,amplitude.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,ampproject.org,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,android.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,angularjs.org,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,aolcdn.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,apkpure.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,appledaily.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,appshopper.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,appspot.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,arcgis.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,archive.org,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,armorgames.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,aspnetcdn.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,att.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,awsstatic.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,azureedge.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,azurewebsites.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,bing.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,bintray.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,bit.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,bit.ly,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,bitbucket.org,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,bjango.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,bkrtx.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,blog.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,blogcdn.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,blogger.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,blogsmithmedia.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,blogspot.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,blogspot.hk,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,bloomberg.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,box.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,box.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,cachefly.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,chromium.org,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,cl.ly,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,cloudflare.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,cloudfront.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,cloudmagic.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,cmail19.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,cnet.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,cocoapods.org,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,comodoca.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,crashlytics.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,culturedcode.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,d.pr,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,danilo.to,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,dayone.me,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,db.tt,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,deskconnect.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,disq.us,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,disqus.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,disquscdn.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,dnsimple.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,docker.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,dribbble.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,droplr.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,duckduckgo.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,dueapp.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,dytt8.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,edgecastcdn.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,edgekey.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,edgesuite.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,engadget.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,entrust.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,eurekavpt.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,evernote.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,fabric.io,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,fast.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,fastly.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,fc2.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,feedburner.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,feedly.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,feedsportal.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,fiftythree.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,firebaseio.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,flexibits.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,flickr.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,flipboard.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,g.co,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,gabia.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,geni.us,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,gfx.ms,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,ggpht.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,ghostnoteapp.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,git.io,♻️ 海外节点'
+    - 'DOMAIN-KEYWORD,github,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,globalsign.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,gmodules.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,godaddy.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,golang.org,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,gongm.in,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,goo.gl,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,goodreaders.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,goodreads.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,gravatar.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,gstatic.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,gvt0.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,hockeyapp.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,hotmail.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,icons8.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,ifixit.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,ift.tt,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,ifttt.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,iherb.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,imageshack.us,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,img.ly,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,imgur.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,imore.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,instapaper.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,ipn.li,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,is.gd,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,issuu.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,itgonglun.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,itun.es,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,ixquick.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,j.mp,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,js.revsci.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,jshint.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,jtvnw.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,justgetflux.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,kat.cr,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,klip.me,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,libsyn.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,linkedin.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,line-apps.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,linode.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,lithium.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,littlehj.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,live.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,live.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,livefilestore.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,llnwd.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,macid.co,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,macromedia.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,macrumors.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,mashable.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,mathjax.org,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,medium.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,mega.co.nz,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,mega.nz,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,megaupload.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,microsofttranslator.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,mindnode.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,mobile01.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,modmyi.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,msedge.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,myfontastic.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,name.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,nextmedia.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,nsstatic.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,nssurge.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,nyt.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,nytimes.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,omnigroup.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,onedrive.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,onenote.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,ooyala.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,openvpn.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,openwrt.org,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,orkut.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,osxdaily.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,outlook.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,ow.ly,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,paddleapi.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,parallels.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,parse.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,pdfexpert.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,periscope.tv,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,pinboard.in,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,pinterest.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,pixelmator.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,pixiv.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,playpcesor.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,playstation.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,playstation.com.hk,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,playstation.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,playstationnetwork.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,pushwoosh.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,rime.im,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,servebom.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,sfx.ms,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,shadowsocks.org,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,sharethis.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,shazam.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,skype.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,smartdns♻️ 海外节点.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,smartmailcloud.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,sndcdn.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,sony.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,soundcloud.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,sourceforge.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,spotify.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,squarespace.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,sstatic.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,st.luluku.pw,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,stackoverflow.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,startpage.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,staticflickr.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,steamcommunity.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,symauth.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,symcb.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,symcd.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,tapbots.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,tapbots.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,tdesktop.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,techcrunch.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,techsmith.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,thepiratebay.org,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,theverge.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,time.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,timeinc.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,tiny.cc,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,tinypic.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,tmblr.co,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,todoist.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,trello.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,trustasiassl.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,tumblr.co,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,tumblr.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,tweetdeck.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,tweetmarker.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,twitch.tv,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,txmblr.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,typekit.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,ubertags.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,ublock.org,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,ubnt.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,ulyssesapp.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,urchin.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,usertrust.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,v.gd,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,v2ex.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,vimeo.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,vimeocdn.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,vine.co,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,vivaldi.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,vox-cdn.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,vsco.co,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,vultr.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,w.org,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,w3schools.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,webtype.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,wikiwand.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,wikileaks.org,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,wikimedia.org,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,wikipedia.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,wikipedia.org,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,windows.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,windows.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,wire.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,wordpress.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,workflowy.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,wp.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,wsj.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,wsj.net,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,xda-developers.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,xeeno.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,xiti.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,yahoo.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,yimg.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,ying.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,yoyo.org,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,ytimg.com,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,telegra.ph,♻️ 海外节点'
+    - 'DOMAIN-SUFFIX,telegram.org,♻️ 海外节点'
+    - 'IP-CIDR,91.108.4.0/22,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,91.108.8.0/21,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,91.108.16.0/22,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,91.108.56.0/22,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,149.154.160.0/20,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR6,2001:67c:4e8::/48,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR6,2001:b28:f23d::/48,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR6,2001:b28:f23f::/48,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,120.232.181.162/32,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,120.241.147.226/32,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,120.253.253.226/32,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,120.253.255.162/32,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,120.253.255.34/32,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,120.253.255.98/32,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,180.163.150.162/32,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,180.163.150.34/32,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,180.163.151.162/32,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,180.163.151.34/32,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,203.208.39.0/24,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,203.208.40.0/24,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,203.208.41.0/24,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,203.208.43.0/24,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,203.208.50.0/24,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,220.181.174.162/32,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,220.181.174.226/32,♻️ 海外节点,no-resolve'
+    - 'IP-CIDR,220.181.174.34/32,♻️ 海外节点,no-resolve'
+    - 'DOMAIN,injections.adguard.org,DIRECT'
+    - 'DOMAIN,local.adguard.org,DIRECT'
+    - 'DOMAIN-SUFFIX,local,DIRECT'
+    - 'IP-CIDR,127.0.0.0/8,DIRECT'
+    - 'IP-CIDR,172.16.0.0/12,DIRECT'
+    - 'IP-CIDR,192.168.0.0/16,DIRECT'
+    - 'IP-CIDR,10.0.0.0/8,DIRECT'
+    - 'IP-CIDR,17.0.0.0/8,DIRECT'
+    - 'IP-CIDR,100.64.0.0/10,DIRECT'
+    - 'IP-CIDR,224.0.0.0/4,DIRECT'
+    - 'IP-CIDR6,fe80::/10,DIRECT'
+    - 'DOMAIN-SUFFIX,cn,DIRECT'
+    - 'DOMAIN-KEYWORD,-cn,DIRECT'
+    - 'GEOIP,CN,DIRECT'
+    - 'MATCH,♻️ 海外节点'
